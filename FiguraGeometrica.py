@@ -1,4 +1,6 @@
-class FiguraGeometrica:
+#ABC = Abstract Base Class
+from abc import ABC, abstractmethod
+class FiguraGeometrica(ABC):
 
     def __init__(self, alto, ancho):
         self.__alto = alto
@@ -15,7 +17,12 @@ class FiguraGeometrica:
 
     def set_ancho(self, ancho):
         self.__ancho = ancho
-
+    
+    
+    @abstractmethod
+    def area(self):
+        pass
+    
     def __str__(self):
         # Solo le hacia falta los self a cada metodo
-        return "Alto: " + str(self.get_alto()) + " Ancho: " + str(self.get_ancho())
+        return "Alto: " + str(self.get_alto()) + ", Ancho: " + str(self.get_ancho())

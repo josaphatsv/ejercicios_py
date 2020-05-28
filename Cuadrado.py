@@ -14,5 +14,5 @@ class Cuadrado(FiguraGeometrica, Color):
     def __str__(self):
         # Cuando llame un metoodo de la misma clase se necesita primero pner self.nombre_del_metodo()
         # Cuando se llama un metodo de otra clase el se ira dentro de los parentesis.
-        return FiguraGeometrica.__str__(self) + " el area del cuadrado es: " + str(
+        return FiguraGeometrica.__str__(self) + ", el area del cuadrado es: " + str(
             self.area()) + " y es de " + Color.__str__(self)
